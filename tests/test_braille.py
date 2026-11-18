@@ -1,14 +1,11 @@
 import unittest
-
 from braille.encoder import UnsupportedCharacterError, text_to_braille
 
 
 class TestTextToBraille(unittest.TestCase):
     def test_lowercase_alphabet(self):
-        self.assertEqual(
-            text_to_braille("abcdefghijklmnopqrstuvwxyz"),
-            "⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵",
-        )
+        self.assertEqual(text_to_braille("abcdefghijklmnopqrstuvwxyz"),
+                         "⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵")
 
     def test_capital_letters(self):
         self.assertEqual(text_to_braille("AbZ"), "⠠⠁⠃⠠⠵")
