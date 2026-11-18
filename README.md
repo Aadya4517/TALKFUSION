@@ -42,6 +42,10 @@ streamlit run app.py
 python -m unittest discover -s tests -v
 ```
 
+## Legacy module dependencies
+
+The original standalone scripts are preserved in the repository but are not yet wired into the new Streamlit application. To experiment with those older modules, install their separate dependencies with `pip install -r requirements-legacy.txt`. Some packages, especially PyAudio and Tesseract, require operating-system-specific setup. The main `requirements.txt` intentionally contains only what the Phase 1 application needs.
+
 ## Braille scope and limitations
 
 The first converter is a deliberately small, uncontracted English Braille prototype. It supports the English alphabet, digits, a limited set of punctuation marks, spaces and line breaks. It does **not** implement all Unified English Braille (UEB) rules, contractions, foreign-language Braille, technical notation or full transcription formatting. Do not use it as a substitute for certified Braille transcription.
