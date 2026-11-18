@@ -66,7 +66,7 @@ elif page == "Braille Studio":
     braille_result = st.session_state.get("braille_result")
     if braille_result:
         st.subheader("Braille output")
-        st.text_area("Braille characters", value=braille_result, height=150, key="braille_output_display", disabled=True)
+        st.code(braille_result)
         st.download_button("Download Braille text", data=braille_result.encode("utf-8"), file_name="talkfusion_braille.txt", mime="text/plain; charset=utf-8", use_container_width=True)
         st.divider()
         st.subheader("Optional local hardware output")
